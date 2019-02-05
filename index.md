@@ -10,10 +10,25 @@ Augmented Reality (AR) refers to technology that overlays information or virtual
 
 # A-Frame Examples
 
-1.  A basic example using A-Frame and AR.js to render a red box on the Hiro marker.
-  *  Webpage: [Basic Example](./aframe/examples/basic.html)
+###1. Basic Cube
+A basic example using A-Frame and AR.js to render a red box directly on the Hiro marker.  The box is rendered with the code:
+
+```html
+ <a-box position='0 0.5 0' material='opacity: 0.5; side:double; color:red;'> </a-box>
+```
+where position indicates the x, y, z components of the cube.  The "side: double" variable also tells A-Frame to render more than one face.  This gives the 3-D effect in the cube. 
+
+  *  Webpage: [Basic Cube Example](./aframe/examples/basic.html)
   *  [Source Code](https://github.com/ambientimmersivelearning/ARdemos/blob/master/aframe/examples/basic.html)
   
-  <img src="./images/QR-basic.PNG" alt="QR-basic"/>
+  <img src="./images/QR-basic.png" alt="QR-basic" height="200" width="200"/>
+  
+###2. Basic Sphere
+Another example to render a green sphere slightly away from the Hiro marker. We call the html tag `a-sphere` and changed `position='0 2 0'` so that the sphere hovers 2 units in the y axis above the marker.  If we edit the x or z axis, the sphere will appear off center of the marker.
+
+  *  Webpage: [Basic Sphere Example](./aframe/examples/sphere.html)
+  *  [Source Code](https://github.com/ambientimmersivelearning/ARdemos/blob/master/aframe/examples/sphere.html)
+  
+  <img src="./images/QR-sphere.png" alt="QR-sphere" height="200" width="200"/>
 
 
