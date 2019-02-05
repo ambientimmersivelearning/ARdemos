@@ -10,7 +10,7 @@ Augmented Reality (AR) refers to technology that overlays information or virtual
 
 # A-Frame Examples
 
-###1. Basic Cube
+### 1. Basic Cube
 A basic example using A-Frame and AR.js to render a red box directly on the Hiro marker.  The box is rendered with the code:
 
 ```html
@@ -20,15 +20,16 @@ where position indicates the x, y, z components of the cube.  The "side: double"
 
   *  Webpage: [Basic Cube Example](./aframe/examples/basic.html)
   *  [Source Code](https://github.com/ambientimmersivelearning/ARdemos/blob/master/aframe/examples/basic.html)
+  <p align="center">
+  <img src="./images/QR-basic.png" alt="QR-basic" height="400" width="400"/>
+  </p>
   
-  <img src="./images/QR-basic.png" alt="QR-basic" height="200" width="200"/>
-  
-###2. Basic Sphere
+### 2. Basic Sphere
 Another example to render a green sphere slightly away from the Hiro marker. We call the html tag `a-sphere` and changed `position='0 2 0'` so that the sphere hovers 2 units in the y axis above the marker.  If we edit the x or z axis, the sphere will appear off center of the marker.
 
   *  Webpage: [Basic Sphere Example](./aframe/examples/sphere.html)
   *  [Source Code](https://github.com/ambientimmersivelearning/ARdemos/blob/master/aframe/examples/sphere.html)
-  
-  <img src="./images/QR-sphere.png" alt="QR-sphere" height="200" width="200"/>
-
+   <p align="center">
+  <img src="./images/QR-sphere.png" alt="QR-sphere" height="400" width="400"/>
+</p>
 
