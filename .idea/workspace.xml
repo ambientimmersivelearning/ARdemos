@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b6d7fa03-f432-4c0f-a462-6b056a9aa116" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/images/QR-basic.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/QR-basic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aframe/examples/scene.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aframe/examples/basic.html" beforeDir="false" afterPath="$PROJECT_DIR$/aframe/examples/basic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aframe/examples/sphere.html" beforeDir="false" afterPath="$PROJECT_DIR$/aframe/examples/sphere.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,8 +19,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aframe/examples/basic.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="35" column="3" lean-forward="true" selection-start-line="35" selection-start-column="3" selection-end-line="36" selection-end-column="12" />
+            <state relative-caret-position="420">
+              <caret line="35" column="78" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="78" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#body#0;n#!!top" expanded="true" />
@@ -27,10 +30,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/aframe/build/aframe-ar.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aframe/examples/sphere.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="35" column="30" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="30" />
+            <state relative-caret-position="210">
+              <caret line="25" column="103" selection-start-line="25" selection-start-column="103" selection-end-line="25" selection-end-column="103" />
+              <folding>
+                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/aframe/examples/scene.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="39" column="84" selection-start-line="39" selection-start-column="84" selection-end-line="39" selection-end-column="84" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -43,8 +64,8 @@
         <entry file="file://$PROJECT_DIR$/index.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="432">
-                <caret line="27" column="157" lean-forward="true" selection-start-line="27" selection-start-column="157" selection-end-line="27" selection-end-column="157" />
+              <first_editor relative-caret-position="399">
+                <caret line="8" column="557" lean-forward="true" selection-start-line="8" selection-start-column="557" selection-end-line="8" selection-end-column="557" />
               </first_editor>
               <second_editor />
             </state>
@@ -56,12 +77,20 @@
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/images/QR-sphere.png">
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>&quot;</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>'</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -69,13 +98,15 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/index.md" />
         <option value="$PROJECT_DIR$/aframe/examples/basic.html" />
         <option value="$PROJECT_DIR$/aframe/examples/sphere.html" />
-        <option value="$PROJECT_DIR$/index.md" />
+        <option value="$PROJECT_DIR$/aframe/examples/cylinder.html" />
+        <option value="$PROJECT_DIR$/aframe/examples/scene.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-434" />
     <option name="y" value="-12" />
     <option name="width" value="2696" />
@@ -97,6 +128,12 @@
               <item name="ARdemos" type="b2602c69:ProjectViewProjectNode" />
               <item name="ARdemos" type="462c0819:PsiDirectoryNode" />
               <item name="aframe" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ARdemos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ARdemos" type="462c0819:PsiDirectoryNode" />
+              <item name="aframe" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ARdemos" type="b2602c69:ProjectViewProjectNode" />
@@ -157,7 +194,7 @@
     </recent_temporary>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1381" height="885" extended-state="6" />
+    <frame x="-6" y="-6" width="1381" height="885" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12267658" />
@@ -185,33 +222,17 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/aframe/examples/basic.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="35" column="3" lean-forward="true" selection-start-line="35" selection-start-column="3" selection-end-line="36" selection-end-column="12" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/images/QR-sphere.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/aframe/examples/sphere.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="35" column="30" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="30" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/aframe/build/aframe-ar.js">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/index.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="432">
-            <caret line="27" column="157" lean-forward="true" selection-start-line="27" selection-start-column="157" selection-end-line="27" selection-end-column="157" />
+          <first_editor relative-caret-position="399">
+            <caret line="8" column="557" lean-forward="true" selection-start-line="8" selection-start-column="557" selection-end-line="8" selection-end-column="557" />
           </first_editor>
           <second_editor />
         </state>
@@ -220,8 +241,38 @@
     <entry file="file://$PROJECT_DIR$/images/QR-basic.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/QR-sphere.png">
-      <provider selected="true" editor-type-id="images" />
+    <entry file="file://$PROJECT_DIR$/aframe/examples/sphere.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="25" column="103" selection-start-line="25" selection-start-column="103" selection-end-line="25" selection-end-column="103" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aframe/examples/basic.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="35" column="78" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="78" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aframe/examples/scene.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="39" column="84" selection-start-line="39" selection-start-column="84" selection-end-line="39" selection-end-column="84" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <!-- edit veiwport for mobile devices -->
+  <meta name='viewport' content='width=device-width, initial-scale=0.5'>
+
+  <title>AR Demos: Basic Cylinder Example</title>
+
+  <!-- include a-frame -->
+  <script src='vendor/aframe/build/aframe.min.js'></script>
+
+  <!-- include ar.js for aframe -->
+  <script src='../build/aframe-ar.js'></script>
+  <script>ARjs.Context.baseURL = '../../three.js/'</script>
+</head>
+
+
+<!-- start the body of your page -->
+<body style='margin : 0; overflow: hidden;'>
+
+<!-- add info at top of page -->
+
+<div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
+		<a href='https://github.com/ambientimmersivelearning/ARdemos/blob/master/aframe/examples/scene.html' target='_blank'>Source Code</a>
+</div>
+
+<!-- Define your 3d scene and enabled ar.js -->
+<a-scene embedded arjs='trackingMethod: best;'>
+
+  <!-- Create a anchor to attach your augmented reality -->
+  <a-anchor hit-testing-enabled='true'>
+
+    <!-- Add your augmented reality here -->
+    <a-cylinder position='0 1 0' radius = '0.3' height = '0.3' color = '#D260FF' opacity = '0.5' >
+    </a-cylinder>
+    <a-cone position='0 1 0'  radius-bottom = '0.5' height = '0.7' color = '#8CB6CD' opacity = '0.4'></a-cone>
+    <a-octahedron position='0 1 0'  radius = '1' color = '#FAA5A5' opacity = '0.3'></a-octahedron>
+      <a-text value='Hello, World!' position='0 1 1' color = 'black' align = 'center'></a-text>
+    <a-plane position='0 0 0'  rotation='-90 0 0' width='3' height='3' color='#FDFF93'></a-plane>
+
+  </a-anchor>
+
+  <!-- Define a static camera -->
+  <a-camera-static/>
+
+</a-scene>
+</body>
+</html>
