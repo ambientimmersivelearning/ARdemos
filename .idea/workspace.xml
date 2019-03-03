@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b6d7fa03-f432-4c0f-a462-6b056a9aa116" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/aframe/examples/basic.html" beforeDir="false" afterPath="$PROJECT_DIR$/aframe/examples/basic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aframe/examples/sphere.html" beforeDir="false" afterPath="$PROJECT_DIR$/aframe/examples/sphere.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aframe/examples/tapping.html" beforeDir="false" afterPath="$PROJECT_DIR$/aframe/examples/tapping.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -11,25 +10,6 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="DockManager">
-    <window id="2">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/aframe/examples/tapping.html">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="-85">
-                    <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -42,7 +22,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aframe/examples/sphere.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="108">
@@ -105,6 +85,15 @@
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/aframe/examples/tapping.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="522">
+              <caret line="41" column="25" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -131,10 +120,10 @@
         <option value="$PROJECT_DIR$/aframe/examples/cylinder.html" />
         <option value="$PROJECT_DIR$/aframe/examples/scene.html" />
         <option value="$PROJECT_DIR$/aframe/src/event.js" />
-        <option value="$PROJECT_DIR$/aframe/examples/tapping.html" />
         <option value="$PROJECT_DIR$/index.md" />
         <option value="$PROJECT_DIR$/aframe/examples/basic.html" />
         <option value="$PROJECT_DIR$/aframe/examples/sphere.html" />
+        <option value="$PROJECT_DIR$/aframe/examples/tapping.html" />
       </list>
     </option>
   </component>
@@ -324,13 +313,6 @@
     <entry file="file://$PROJECT_DIR$/images/QR-sphere.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/aframe/examples/tapping.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-85">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -367,6 +349,13 @@
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aframe/examples/tapping.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="41" column="25" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
         </state>
       </provider>
     </entry>
