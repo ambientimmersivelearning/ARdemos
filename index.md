@@ -8,7 +8,10 @@ Documentation for an EE296 and EE 496 project focusing on the implementation of 
 
 Augmented Reality (AR) refers to technology that overlays information or virtual objects on real-world scenes in real-time.  Education is a major field that is currently being affected by AR.  AR can introduce new methods of teaching, change the location and timing of studying, and make the learning process more engaging.  Smartphones are the ideal platform for AR in education due to portability, size, and availability.  Our team is interested in exploring ways to create a more immersive and engaging learning experience using smartphone AR technology.
 
-# A-Frame Examples
+# Examples
+
+## Introductory Examples and Setting Up The Environment
+The following examples were completed to get accustomed to using AR.js, A-Frame, and the environment.  These examples taught us how to use the special html tags, ordering, and components of each tag.  These examples proved to be useful exercises for team members who were not so familiar with html.
 
 ### 1. Basic Cube
 A basic example using A-Frame and AR.js to render a red box directly on the Hiro marker.  The box is rendered with the code:
@@ -42,4 +45,27 @@ We also see how layered objects interact with one another with different opacity
   *  [Source Code](https://github.com/ambientimmersivelearning/ARdemos/blob/master/aframe/examples/scene.html)
    <p align="center">
   <img src="./images/QR-scene.png" alt="QR-scene" height="400" width="400"/>
+</p>
+
+## Testing Interactivity
+These next few examples are building and understanding the limits of interactivity for mobile browser AR.  Our main goals were to explore tapping, scaling, dragging, and animation.
+
+### 1. Tapping (MouseClick)
+Our team realized that any object interactivity would require JavaScript scripts to handle mouse events.  We did some research and found that A-Frame has it's own cursor feature that became available in v0.6.1 by setting `<a-scene cursor="rayOrigin: mouse">`.  Unfortunately according to the API there are no `hovering`/`hovered` or `mouseenter`/`mouseexit` states for mobile.  This vastly limits how the user can interact with the object on a smartphone.  Our team will have to think more creatively about interactivity when coming up with the larger demo.
+
+In this example we anchored a purple box at a 30 degree angle to the marker.  Using `<a-animation>` we included two different animations when the box is tapped, it will spin and change color.  The `fill` component in animation determines the effect of animation when not actively in plan.  We ran into problems with the color animation but realized we needed to change `fill = backwards` to `fill = forwards` so that after the animation the color would not immediately get set to NULL.  
+
+The following code defines the mouse cursor.  Fuse is set to `false` for mobile.
+```html
+  <a-entity position='0 0.1 4'>
+    <a-entity camera look-controls mouse-cursor>
+      <a-cursor fuse='false' opacity = '0'></a-cursor>
+    </a-entity>
+  </a-entity>
+```
+
+  *  Webpage: [Tapping Example](./aframe/examples/tapping.html)
+  *  [Source Code](https://github.com/ambientimmersivelearning/ARdemos/blob/master/aframe/examples/tapping.html)
+   <p align="center">
+  <img src="./images/QR-tapping.png" alt="QR-tapping" height="400" width="400"/>
 </p>
