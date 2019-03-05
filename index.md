@@ -69,3 +69,5 @@ The following code defines the mouse cursor.  Fuse is set to `false` for mobile.
    <p align="center">
   <img src="./images/QR-tapping.png" alt="QR-tapping" height="400" width="400"/>
 </p>
+
+### 2. Dragging

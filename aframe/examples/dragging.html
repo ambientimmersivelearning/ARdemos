@@ -6,7 +6,7 @@
   <!-- edit veiwport for mobile devices -->
   <meta name='viewport' content='width=device-width, initial-scale=0.5'>
 
-  <title>AR Demos: Tapping Example</title>
+  <title>AR Demos: Dragging Example</title>
 
 
   <!-- include a-frame -->
@@ -16,8 +16,8 @@
   <script src='../build/aframe-ar.js'></script>
   <script>ARjs.Context.baseURL = '../../three.js/'</script>
 
-<!--  &lt;!&ndash; include mouse events &ndash;&gt;-->
-<!--  <script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>-->
+  <!-- include mouse events -->
+  <script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>
 
 </head>
 
@@ -29,13 +29,6 @@
   <a-anchor hit-testing-enabled='true'>
 
     <!-- mouse hovering does not work on mobile, so we will stick to clicking -->
-    <a-entity camera look-controls>
-      <a-entity cursor="fuse: true; fuseTimeout: 500"
-                position="0 0 -1"
-                geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
-                material="color: black; shader: flat">
-      </a-entity>
-    </a-entity>
 
     <!-- define a box to click -->
     <a-box position='0 0 -5' rotation='30 30 0' color='mediumpurple' opacity = '0.9' scale = '0.7 0.7 0.7'>
@@ -44,6 +37,13 @@
       <a-animation attribute= 'color' from='mediumpurple' begin='click' dur='1500' fill="forwards" to ='lemonchiffon' ></a-animation>
   </a-box>
 
+
+    <!-- define the mouse cursor -->
+  <a-entity position='0 0 0'>
+    <a-entity camera look-controls mouse-cursor>
+      <a-cursor fuse='false' opacity = '0'></a-cursor>
+    </a-entity>
+  </a-entity>
 
   </a-anchor>
 </a-scene>
