@@ -8,12 +8,14 @@ Documentation for an EE296 and EE 496 project focusing on the implementation of 
 
 Augmented Reality (AR) refers to technology that overlays information or virtual objects on real-world scenes in real-time.  Education is a major field that is currently being affected by AR.  AR can introduce new methods of teaching, change the location and timing of studying, and make the learning process more engaging.  Smartphones are the ideal platform for AR in education due to portability, size, and availability.  Our team is interested in exploring ways to create a more immersive and engaging learning experience using smartphone AR technology.
 
-# Examples
 
-## Introductory Examples and Setting Up The Environment
+# Introductory Examples and Setting Up The Environment
 The following examples were completed to get accustomed to using AR.js, A-Frame, and the environment.  These examples taught us how to use the special html tags, ordering, and components of each tag.  These examples proved to be useful exercises for team members who were not so familiar with html.
 
 ### 1. Basic Cube
+
+![RedBox](./gifs/redbox.gif)
+
 A basic example using A-Frame and AR.js to render a red box directly on the Hiro marker.  The box is rendered with the code:
 
 ```html
@@ -47,7 +49,7 @@ We also see how layered objects interact with one another with different opacity
   <img src="./images/QR-scene.png" alt="QR-scene" height="400" width="400"/>
 </p>
 
-## Testing Interactivity
+# Testing Interactivity
 These next few examples are building and understanding the limits of interactivity for mobile browser AR.  Our main goals were to explore tapping, scaling, dragging, and animation.
 
 ### 1. Tapping (MouseClick)
@@ -78,9 +80,6 @@ The following code defines the fused cursor ring.
               geometry="primitive: plane"
               material="visible: false">
 ```
-
-
-
 
   *  Webpage: [Desktop Tapping Example](./aframe/examples/tapping.html)
   *  [Source Code](https://github.com/ambientimmersivelearning/ARdemos/blob/tapping-optimization/aframe/examples/tapping.html)
