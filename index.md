@@ -51,23 +51,31 @@ We also see how layered objects interact with one another with different opacity
 These next few examples are building and understanding the limits of interactivity for mobile browser AR.  Our main goals were to explore tapping, scaling, dragging, and animation.
 
 ### 1. Tapping (MouseClick)
-Our team realized that any object interactivity would require JavaScript scripts to handle mouse events.  We did some research and found that A-Frame has it's own cursor feature that became available in v0.6.1 by setting `<a-scene cursor="rayOrigin: mouse">`.  Unfortunately according to the API there are no `hovering`/`hovered` or `mouseenter`/`mouseexit` states for mobile.  This vastly limits how the user can interact with the object on a smartphone.  Our team will have to think more creatively about interactivity when coming up with the larger demo.
+Our team realized that any object interactivity would require JavaScript scripts to handle mouse events.  We did some research and found that A-Frame has it's own cursor feature that became available in v0.6.1 by setting `<a-scene cursor="rayOrigin: mouse">`.  Unfortunately according to the API there are no `hovering`/`hovered` or `mouseenter`/`mouseexit` states for mobile. This vastly limits how the user can interact with the object on a smartphone.  Our team will have to think more creatively about interactivity when coming up with the larger demo.
 
-In this example we anchored a purple box at a 30 degree angle to the marker.  Using `<a-animation>` we included two different animations when the box is tapped, it will spin and change color.  The `fill` component in animation determines the effect of animation when not actively in plan.  We ran into problems with the color animation but realized we needed to change `fill = backwards` to `fill = forwards` so that after the animation the color would not immediately get set to NULL.  
+In this example we tested a desktop version and a mobile version because of different interactiveness.  A purple box at a 30 degree angle was anchored to the marker.  Using `<a-animation>` we included two different animations when the box is tapped, it will spin and change color.  The `fill` component in animation determines the effect of animation when not actively in plan.  We ran into problems with the color animation but realized we needed to change `fill = backwards` to `fill = forwards` so that after the animation the color would not immediately get set to NULL.
 
-The following code defines the mouse cursor.  Fuse is set to `false` for mobile.
+On desktop we fused the cursor to an object, so the animation only happens if the box is dragged to the ring. Clicking on the object will not start the animation.
+
+The following code defines the fused cursor ring. 
 ```html
-  <a-entity position='0 0.1 4'>
-    <a-entity camera look-controls mouse-cursor>
-      <a-cursor fuse='false' opacity = '0'></a-cursor>
+    <a-entity camera look-controls>
+      <a-entity cursor="fuse: true; fuseTimeout: 500"
+                position="0 0 -1"
+                geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+                material="color: black; shader: flat">
+      </a-entity>
     </a-entity>
-  </a-entity>
 ```
+ For mobile fuse is set to `false`.  The user starts the animation by tapping on the object.
 
-  *  Webpage: [Tapping Example](./aframe/examples/tapping.html)
+
+  *  Webpage: [Desktop Tapping Example](./aframe/examples/tapping.html)
   *  [Source Code](https://github.com/ambientimmersivelearning/ARdemos/blob/tapping-optimization/aframe/examples/tapping.html)
+  *  Webpage: [Mobile Tapping Example](./aframe/examples/tappingmobile.html)
+  *  [Source Code](https://github.com/ambientimmersivelearning/ARdemos/blob/tapping-optimization/aframe/examples/tappingmobile.html)
+      
    <p align="center">
   <img src="./images/QR-tapping.png" alt="QR-tapping" height="400" width="400"/>
 </p>
 
-### 2. Dragging
