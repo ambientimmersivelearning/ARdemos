@@ -67,15 +67,28 @@ The following code defines the fused cursor ring.
       </a-entity>
     </a-entity>
 ```
- For mobile fuse is set to `false`.  The user starts the animation by tapping on the object.
+ For mobile, fuse is set to `false`.  The user starts the animation by tapping on the object.
+ 
+ The following code defines the cursor attached to the marker.  Unlike on desktop, `camera look-controls` has been attached to  `<a-scene>` rather than a separate entity.
+ 
+ ```html
+<a-anchor hit-testing-enabled='true'
+              cursor="fuse: false; fuseTimeout: 500"
+              position="0 0 -5"
+              geometry="primitive: plane"
+              material="visible: false">
+```
+
+
 
 
   *  Webpage: [Desktop Tapping Example](./aframe/examples/tapping.html)
   *  [Source Code](https://github.com/ambientimmersivelearning/ARdemos/blob/tapping-optimization/aframe/examples/tapping.html)
+  
   *  Webpage: [Mobile Tapping Example](./aframe/examples/tappingmobile.html)
   *  [Source Code](https://github.com/ambientimmersivelearning/ARdemos/blob/tapping-optimization/aframe/examples/tappingmobile.html)
       
    <p align="center">
-  <img src="./images/QR-tapping.png" alt="QR-tapping" height="400" width="400"/>
+  <img src="./images/QR-tappingmobile.png" alt="QR-tappingmobile" height="400" width="400"/>
 </p>
 
