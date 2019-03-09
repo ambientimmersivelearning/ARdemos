@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# Welcome to Ambient Immersive Learning
+# Welcome to Ambient Lab Immersive Learning
 
 Documentation for an EE296 and EE 496 project focusing on the implementation of an immersive learning solution based on Augmented Reality and QR codes.
 
@@ -64,7 +64,7 @@ We also see how layered objects interact with one another with different opacity
 # Testing Interactivity
 These next few examples are building and understanding the limits of interactivity for mobile browser AR.  Our main goals were to explore tapping, scaling, dragging, and animation.
 
-### 1. Tapping (MouseClick)
+### 1. Tapping (cursor)
 
   <p align="center">
   <img src="gifs/tapping.gif" alt="tappinggif" height="250" width="250"/>
@@ -106,5 +106,12 @@ The following code defines the fused cursor ring.
       
    <p align="center">
   <img src="./images/QR-tappingmobile.png" alt="QR-tappingmobile" height="400" width="400"/>
-</p>
+   </p>
+   
+### 2. Dragging (click-drag)
+Our next goal was to implement a smoother dragging interaction.  In the tapping example, the user is briefly able to drag the object, but it's choppy and times out after a couple of movements.  A-Frame does not include API for dragging, but we found a script called aframe-click-drag-component that accomplishes this.  As in the previous example we did two versions: desktop and mobile.
 
+The `click-drag` component is included into the objects tag to run the dragging script.  To avoid cross interactions between clicking and dragging we did not set `cursor` in this example.
+
+  *  Webpage: [Desktop Dragging Example](./aframe/examples/dragging.html)
+  *  [Source Code](https://github.com/ambientimmersivelearning/ARdemos/blob/tapping-optimization/aframe/examples/dragging.html)
