@@ -46,6 +46,11 @@ Another example to render a green sphere slightly away from the Hiro marker. We 
 </p>
 
 ### 3. Basic Scene
+
+  <p align="center">
+  <img src="gifs/scene.gif" alt="scenegif" height="250" width="250"/>
+  </p>
+
 This example sets up a basic scene using multiple objects, a plane, and text.  A cylinder, cone, and octahedron are layered within each other, and hover above a plane.  The text "Hello World!" is shown in front of the these objects.  Each object is rendered using an A-Frame html tag such as `a-cylinder`, `a-cone`, or `a-octahedron`.  The text is rendered using `a-text`.  This example is helpful in moving towards more complicated scenes.
 
 We also see how layered objects interact with one another with different opacity.  The cylinder and cone show graininess at points of intersection.
@@ -60,6 +65,11 @@ We also see how layered objects interact with one another with different opacity
 These next few examples are building and understanding the limits of interactivity for mobile browser AR.  Our main goals were to explore tapping, scaling, dragging, and animation.
 
 ### 1. Tapping (MouseClick)
+
+  <p align="center">
+  <img src="gifs/tapping.gif" alt="tappinggif" height="250" width="250"/>
+  </p>
+  
 Our team realized that any object interactivity would require JavaScript scripts to handle mouse events.  We did some research and found that A-Frame has it's own cursor feature that became available in v0.6.1 by setting `<a-scene cursor="rayOrigin: mouse">`.  Unfortunately according to the API there are no `hovering`/`hovered` or `mouseenter`/`mouseexit` states for mobile. This vastly limits how the user can interact with the object on a smartphone.  Our team will have to think more creatively about interactivity when coming up with the larger demo.
 
 In this example we tested a desktop version and a mobile version because of different interactiveness.  A purple box at a 30 degree angle was anchored to the marker.  Using `<a-animation>` we included two different animations when the box is tapped, it will spin and change color.  The `fill` component in animation determines the effect of animation when not actively in plan.  We ran into problems with the color animation but realized we needed to change `fill = backwards` to `fill = forwards` so that after the animation the color would not immediately get set to NULL.
