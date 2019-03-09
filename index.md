@@ -99,10 +99,10 @@ The following code defines the fused cursor ring.
 ```
 
   *  Webpage: [Desktop Tapping Example](./aframe/examples/tapping.html)
-  *  [Source Code](https://github.com/ambientimmersivelearning/ARdemos/blob/tapping-optimization/aframe/examples/tapping.html)
+  *  [Source Code](https://github.com/ambientimmersivelearning/ARdemos/blob/aframe/examples/tapping.html)
   
   *  Webpage: [Mobile Tapping Example](./aframe/examples/tappingmobile.html)
-  *  [Source Code](https://github.com/ambientimmersivelearning/ARdemos/blob/tapping-optimization/aframe/examples/tappingmobile.html)
+  *  [Source Code](https://github.com/ambientimmersivelearning/ARdemos/blob/aframe/examples/tappingmobile.html)
       
    <p align="center">
   <img src="./images/QR-tappingmobile.png" alt="QR-tappingmobile" height="400" width="400"/>
@@ -114,4 +114,4 @@ Our next goal was to implement a smoother dragging interaction.  In the tapping 
 The `click-drag` component is included into the objects tag to run the dragging script.  To avoid cross interactions between clicking and dragging we did not set `cursor` in this example.
 
   *  Webpage: [Desktop Dragging Example](./aframe/examples/dragging.html)
-  *  [Source Code](https://github.com/ambientimmersivelearning/ARdemos/blob/tapping-optimization/aframe/examples/dragging.html)
+  *  [Source Code](https://github.com/ambientimmersivelearning/ARdemos/blob/aframe/examples/dragging.html)
