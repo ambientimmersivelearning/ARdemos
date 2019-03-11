@@ -24,8 +24,8 @@
 
 <body>
 <!-- Define your 3d scene and enabled ar.js -->
-<a-scene embedded arjs='trackingMethod: best;' physics='debug: true'>
-
+<a-scene embedded arjs='trackingMethod: best;' physics='debug: true' >
+    <a-entity camera look-controls="reverseMouseDrag: true"></a-entity>
     <!-- Create a anchor to attach your augmented reality -->
     <a-anchor hit-testing-enabled='false'
               position="0 0 -5"
