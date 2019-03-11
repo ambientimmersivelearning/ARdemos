@@ -124,6 +124,7 @@ The `click-drag` component is included into the objects tag to run the dragging 
 
 The `dynamic-body` component designates that the sphere is a freely moving object, it has mass and can collide with other objects.  This will be an interesting component to explore when using multiple markers.  A `static-body` will not be affected by gravity or collisions.
 
+
   *  Webpage: [Desktop Dragging Example](./aframe/examples/dragging.html)
   *  [Source Code](https://github.com/ambientimmersivelearning/ARdemos/blob/aframe/examples/dragging.html)
   
