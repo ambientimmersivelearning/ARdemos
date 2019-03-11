@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36848852-e21e-4dec-824a-8d46fbe66df1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/aframe/examples/dragging.html" beforeDir="false" afterPath="$PROJECT_DIR$/aframe/examples/dragging.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aframe/examples/draggingmobile.html" beforeDir="false" afterPath="$PROJECT_DIR$/aframe/examples/draggingmobile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/index.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,7 +20,7 @@
               <entry file="file://$PROJECT_DIR$/aframe/examples/draggingmobile.html">
                 <provider selected="true" editor-type-id="text-editor">
                   <state relative-caret-position="282">
-                    <caret line="27" column="71" selection-start-line="27" selection-start-column="71" selection-end-line="27" selection-end-column="71" />
+                    <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="71" />
                   </state>
                 </provider>
               </entry>
@@ -68,8 +67,8 @@
         <entry file="file://$PROJECT_DIR$/index.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="315">
-                <caret line="124" column="273" selection-start-line="124" selection-start-column="273" selection-end-line="124" selection-end-column="273" />
+              <first_editor relative-caret-position="621">
+                <caret line="132" column="391" selection-start-line="132" selection-start-column="391" selection-end-line="132" selection-end-column="391" />
               </first_editor>
               <second_editor />
             </state>
@@ -145,8 +144,8 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="274" />
-    <option name="y" value="-26" />
+    <option name="x" value="898" />
+    <option name="y" value="-24" />
     <option name="width" value="1390" />
     <option name="height" value="1756" />
   </component>
@@ -403,15 +402,15 @@
     <entry file="file://$PROJECT_DIR$/aframe/examples/draggingmobile.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="282">
-          <caret line="27" column="71" selection-start-line="27" selection-start-column="71" selection-end-line="27" selection-end-column="71" />
+          <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="71" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="315">
-            <caret line="124" column="273" selection-start-line="124" selection-start-column="273" selection-end-line="124" selection-end-column="273" />
+          <first_editor relative-caret-position="621">
+            <caret line="132" column="391" selection-start-line="132" selection-start-column="391" selection-end-line="132" selection-end-column="391" />
           </first_editor>
           <second_editor />
         </state>

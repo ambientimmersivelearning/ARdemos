@@ -124,12 +124,19 @@ The `click-drag` component is included into the objects tag to run the dragging 
 
 The `dynamic-body` component designates that the sphere is a freely moving object, it has mass and can collide with other objects.  This will be an interesting component to explore when using multiple markers.  A `static-body` will not be affected by gravity or collisions.
 
+There are several glitches that we can't currently fix with the dragging interaction.  On the desktop version it functions properly, but with mobile the dragging is inverted.  We tried to fix it by reversing the mouse drag in the following code.
+
+```html
+<a-entity camera look-controls="reverseMouseDrag: true"></a-entity>
+```
+
+When testing the mobile version on a desktop browser, this solution works properly, but when actually running on mobile it still fails.  Another issue we found is that dragging on mobile only works horizontally across the screen, not vertically.  However, it is not very problematic because the mobile platform gives dynamism to both the camera and marker.  By just tilting the phone/marker, dragging horizontally can translate into dragging on the x, y, or z axis.
 
   *  Webpage: [Desktop Dragging Example](./aframe/examples/dragging.html)
-  *  [Source Code](https://github.com/ambientimmersivelearning/ARdemos/blob/aframe/examples/dragging.html)
+  *  [Source Code](https://github.com/ambientimmersivelearning/ARdemos/blob/master/aframe/examples/dragging.html)
   
   *  Webpage: [Mobile Dragging Example](./aframe/examples/draggingmobile.html)
-  *  [Source Code](https://github.com/ambientimmersivelearning/ARdemos/blob/aframe/examples/draggingmobile.html)
+  *  [Source Code](https://github.com/ambientimmersivelearning/ARdemos/blob/master/aframe/examples/draggingmobile.html)
   
      <p align="center">
      <img src="./images/QR-draggingmobile.png" alt="QR-draggingmobile" height="400" width="400"/>
