@@ -111,7 +111,25 @@ The following code defines the fused cursor ring.
 ### 2. Dragging (click-drag)
 Our next goal was to implement a smoother dragging interaction.  In the tapping example, the user is briefly able to drag the object, but it's choppy and times out after a couple of movements.  A-Frame does not include API for dragging, but we found a script called aframe-click-drag-component that accomplishes this.  As in the previous example we did two versions: desktop and mobile.
 
-The `click-drag` component is included into the objects tag to run the dragging script.  To avoid cross interactions between clicking and dragging we did not set `cursor` in this example.
+The `click-drag` component is included into the objects tag to run the dragging script.  To avoid cross interactions between clicking and dragging we did not set `cursor` in this example.  The following code shows a sphere with the ability to be dragged.
+
+```html
+<a-sphere click-drag
+    position='0 0 -5'
+    color='lightsalmon'
+    dynamic-body='mass: 20'
+    radius='0.5'>
+</a-sphere>
+```
+
+The `dynamic-body` component designates that the sphere is a freely moving object, it has mass and can collide with other objects.  This will be an interesting component to explore when using multiple markers.  A `static-body` will not be affected by gravity or collisions.
 
   *  Webpage: [Desktop Dragging Example](./aframe/examples/dragging.html)
   *  [Source Code](https://github.com/ambientimmersivelearning/ARdemos/blob/aframe/examples/dragging.html)
+  
+  *  Webpage: [Mobile Dragging Example](./aframe/examples/draggingmobile.html)
+  *  [Source Code](https://github.com/ambientimmersivelearning/ARdemos/blob/aframe/examples/draggingmobile.html)
+  
+     <p align="center">
+     <img src="./images/QR-draggingmobile.png" alt="QR-draggingmobile" height="400" width="400"/>
+     </p>
