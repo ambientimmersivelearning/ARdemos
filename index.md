@@ -18,7 +18,7 @@ Augmented Reality (AR) refers to technology that overlays information or virtual
 
 # Stage 1 Examples
 
-[Basic Example](./ARdemos/aframe/examples/basic.html)
+[Basic Example](./aframe/examples/basic.html)
 
 ### Header 3
 
