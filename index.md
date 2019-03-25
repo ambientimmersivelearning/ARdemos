@@ -14,7 +14,7 @@ Augmented Reality (AR) refers to technology that overlays information or virtual
   *  Webpage: [Basic Example](./aframe/examples/basic.html)
   *  [Source Code](https://github.com/ambientimmersivelearning/ARdemos/blob/master/aframe/examples/basic.html)
   
-  <img src="./images/QR-basic.PNG" alt="QR-basic" width="300"/>
+  <img src="./images/QR-basic.PNG" alt="QR-basic"/>
 
 ### Header 3
 
