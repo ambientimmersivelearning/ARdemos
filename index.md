@@ -13,8 +13,7 @@ Augmented Reality (AR) refers to technology that overlays information or virtual
 1.  A basic example using A-Frame and AR.js to render a red box on the Hiro marker.
   *  Webpage: [Basic Example](./aframe/examples/basic.html)
   *  [Source Code](https://github.com/ambientimmersivelearning/ARdemos/blob/master/aframe/examples/basic.html)
-  
-     ![QR-Basic](./images/QR-basic.PNG =250x)
+  *  <img src="./images/QR-basic.PNG" alt="QR-basic" width="200"/>
 
 ### Header 3
 
