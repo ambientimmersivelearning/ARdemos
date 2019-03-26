@@ -143,6 +143,12 @@ When testing the mobile version on a desktop browser, this solution works proper
      </p>
      
 ### 3. Improving Mobile Use (hammer.js)
+
+  <p align="center">
+  <img src="gifs/hammertest.gif" alt="hammertestgif" height="250" width="250"/>
+  </p>
+  
+
 After running through these examples it became clear to our team that relying solely on A-Frame and AR.js API was not going to be sufficient for a smooth mobile experience.  We looked for ways to better handle touch gestures and found hammer.js.  Hammer is an open-source library that can recognize gestures made by touch, mouse, and pointerEvents.
 
 We redid the last two examples using hammer.js as opposed to relying on `cursor` and `click-drag`.  The results were so much better!  Hammer makes it really easy to subscribe to touch events.  We simply added `id = 'model'` to the `<a-box>` component and scripted different touch events for the model id.

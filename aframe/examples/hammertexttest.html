@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- edit veiwport for mobile devices -->
+    <meta name='viewport' content='width=device-width, initial-scale=0.5'>
+    <meta name="msapplication-tap-highlight" content="no"/>
+
+    <title>AR Demos: Hammer Gesture Test</title>
+
+    <!-- include a-frame -->
+    <script src="vendor/aframe/build/aframe.min.js"></script>
+
+    <!-- include ar.js for aframe -->
+    <script src='../build/aframe-ar.js'></script>
+    <script>ARjs.Context.baseURL = '../../three.js/'</script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.js"></script>
+
+</head>
+
+
+<!-- start the body of your page -->
+<body style='margin : 0; overflow: hidden;'>
+
+<!-- add info at top of page -->
+<div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
+    <a href="https://github.com/ambientimmersivelearning/ARdemos/blob/master/aframe/examples/hammertest.html"
+       target="_blank">Source Code</a>
+</div>
+
+<!-- Define your 3d scene and enabled ar.js -->
+<a-scene id='scene' embedded arjs='trackingMethod: best;'>
+    <a-asset-item id="obj1" src="models/welcome.obj"></a-asset-item>
+    <a-asset-item id="mtl1" src="models/welcome.mtl"></a-asset-item>
+
+    <a-asset-item id="obj2" src="models/ambient.obj"></a-asset-item>
+    <a-asset-item id="mtl2" src="models/ambient.mtl"></a-asset-item>
+
+    <a-entity id='spinning shapes'>
+        <a-box position='0 -3 0' material='opacity: 0.5; side:double; color:red;'>
+            <a-animation attribute="rotation"
+                         dur="10000"
+                         fill="forwards"
+                         to="0 360 0"
+                         repeat="indefinite"></a-animation>
+        </a-box>
+        <a-animation attribute="material.opacity" begin="fade" to="0"></a-animation>
+    </a-entity>
+
+    <!-- Add your augmented reality here -->
+    <a-marker preset='hiro'>
+        <a-obj-model id="model1" src="#obj1" mtl="#mtl1" position='0 0 0' scale='0.02 0.02 0.02'
+                     visible='true'></a-obj-model>
+        <a-text id="taptext" value="tap to continue" align = 'center' position='0 1 0'></a-text>
+        <a-obj-model id="model2" src="#obj2" mtl="#mtl2" position='0 0 0' scale='0.02 0.02 0.02'
+                     visible='false'></a-obj-model>
+
+        <a-entity id='spinningshapes' visible = 'false'>
+            <a-box position='3 -1 -3' material='opacity: 0.5; side:double; color:thistle;'>
+                <a-animation attribute="rotation"
+                             dur="1000"
+                             fill="forwards"
+                             to="0 360 0"
+                             repeat="indefinite"></a-animation>
+            </a-box>
+            <a-cone position='-2 -1 -2' material='opacity: 0.4; side:double; color:tomato;'>
+                <a-animation attribute="rotation"
+                             dur="1500"
+                             fill="backwards"
+                             to="0 0 360"
+                             repeat="indefinite"></a-animation>
+            </a-cone>
+            <a-cylinder position='2 0 0' material='opacity: 0.6; side:double; color:mediumpurple;'>
+                <a-animation attribute="rotation"
+                             dur="3000"
+                             fill="forwards"
+                             to="0 30 360"
+                             repeat="indefinite"></a-animation>
+            </a-cylinder>
+            <a-dodecahedron position='-1 0 -2' material='opacity: 0.6; side:double; color:yellow;' scale = '0.3 0.3 0.3'>
+                <a-animation attribute="rotation"
+                             dur="4000"
+                             fill="backwards"
+                             to="-30 -30 360"
+                             repeat="indefinite"></a-animation>
+            </a-dodecahedron>
+            <a-box  position='1 0 -2' material='opacity: 0.7; side:double; color:blue;' scale = '0.6 0.6 0.3'>
+            </a-box>
+            <a-sphere  position='0 0 -3' material='opacity: 0.3; side:double; color:teal;' scale = '0.6 0.6 0.3'>
+            </a-sphere>
+            <a-sphere  position='-2 1 1' material='opacity: 0.3; side:double; color:red;' scale = '0.3 0.3 0.3'>
+            </a-sphere>
+        </a-entity>
+
+    </a-marker>
+
+    </a-anchor>
+
+    <!-- Define a static camera -->
+    <a-entity camera></a-entity>
+
+</a-scene>
+</body>
+
+<script>
+    const scene = document.getElementById('scene')
+    scene.addEventListener('touchmove', event => {
+        movingTouch(event)
+    })
+
+    //get model id
+    const model1 = document.getElementById('model1')
+    const model2 = document.getElementById('model2')
+    const spinningshapes = document.getElementById('spinningshapes')
+    const taptext = document.getElementById('taptext')
+    //adding hammer manager to scene
+    const manager = new Hammer.Manager(scene)
+    //add tapping interaction and function
+    const tap = new Hammer.Tap({
+        taps: 1
+    })
+    manager.add(tap)
+    manager.on('tap', function (ev) {
+        // if (!model1||model2) return
+
+        var curr = model1.getAttribute('visible')
+        console.log(curr)
+
+        if (curr == true) {
+            model1.setAttribute('visible', 'false')
+            model2.setAttribute('visible', 'true')
+            spinningshapes.setAttribute('visible', 'true')
+            taptext.setAttribute('visible', 'false')
+        } else {
+            model1.setAttribute('visible', 'true')
+            model2.setAttribute('visible', 'false')
+            spinningshapes.setAttribute('visible', 'false')
+        }
+
+        console.log("tap")
+    })
+</script>
+</html>
