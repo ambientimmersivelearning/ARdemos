@@ -143,9 +143,9 @@ When testing the mobile version on a desktop browser, this solution works proper
      </p>
      
 ### 3. Improving Mobile Use (hammer.js)
-After running through these several examples it became clear to our team that relying solely on A-Frame and AR.js API was not going to be sufficient for a smooth mobile experience.  We looked for ways better handle touch gestures and found hammer.js.  Hammer is an open-source library that can recognize gestures made by touch, mouse, and pointerEvents.
+After running through these examples it became clear to our team that relying solely on A-Frame and AR.js API was not going to be sufficient for a smooth mobile experience.  We looked for ways to better handle touch gestures and found hammer.js.  Hammer is an open-source library that can recognize gestures made by touch, mouse, and pointerEvents.
 
-We redid the last two examples using hammer.js rather than relying on `cursor` and `click-drag`.  The results were so much better than expected!  Hammer makes it really easy to subscribe to touch events as well.  We simply added `id = 'model'` to the `<a-box>` component and scripted different touch events.
+We redid the last two examples using hammer.js as opposed to relying on `cursor` and `click-drag`.  The results were so much better!  Hammer makes it really easy to subscribe to touch events.  We simply added `id = 'model'` to the `<a-box>` component and scripted different touch events for the model id.
 
 The following code shows how we subscribe to the model we need, and set up a hammer manager for the scene.  This manager handles all gestures; the example shows how it handles a `tap` gesture to change color.  In this example we also handled `pinch` to scale the box and `swipe` to rotate.
 
@@ -159,7 +159,7 @@ The following code shows how we subscribe to the model we need, and set up a ham
     manager.on('tap', function (ev) { ... })
 ```
 
-The one downside is that dragging is still not a reliable action on mobile, so our team will have to avoid that from now on.  Luckily, moving the marker itself is still a viable moving option.  We are much happier with this implementation of interactivity.
+The one downside is that dragging is still not a reliable action on mobile, so our team will have to avoid that from now on.  We are much happier with this implementation of interactivity.
 
   *  Webpage: [Hammer Gestures Example](./aframe/examples/hammertest.html)
   *  [Source Code](https://github.com/ambientimmersivelearning/ARdemos/blob/master/aframe/examples/hammertest.html)
