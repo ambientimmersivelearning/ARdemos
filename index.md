@@ -4,6 +4,13 @@ layout: default
 
 # Welcome to Ambient Lab Immersive Learning
 
+Try it out! Scan the AR-Marker below using a smartphone and allow the webpage to access the camera.
+
+  <p align="center">
+  <img src="gifs/hammertexttest.gif" alt="hammertexttestgif" height="200" width="200"/>
+<img src="./images/QR-hammertexttest.png" alt="QR-hammertexttest" height="200" width="200"/>
+  </p>
+
 Documentation for an EE296 and EE 496 project focusing on the implementation of an immersive learning solution based on Augmented Reality and QR codes.
 
 Augmented Reality (AR) refers to technology that overlays information or virtual objects on real-world scenes in real-time.  Education is a major field that is currently being affected by AR.  AR can introduce new methods of teaching, change the location and timing of studying, and make the learning process more engaging.  Smartphones are the ideal platform for AR in education due to portability, size, and availability.  Our team is interested in exploring ways to create a more immersive and engaging learning experience using smartphone AR technology.
