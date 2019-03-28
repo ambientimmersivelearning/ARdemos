@@ -8,7 +8,7 @@ Try it out! Scan the AR-Marker below using a smartphone and allow the webpage to
 
   <p align="center">
   <img src="gifs/hammertexttest.gif" alt="hammertexttestgif" height="200" width="200"/>
-<img src="./images/QR-hammertexttest.png" alt="QR-hammertexttest" height="300" width="300"/>
+<img src="./images/QR-hammertexttest2.png" alt="QR-hammertexttest2" height="300" width="300"/>
   </p>
 
 
