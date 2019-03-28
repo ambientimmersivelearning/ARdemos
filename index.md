@@ -7,7 +7,7 @@ layout: default
 Try it out! Scan the AR-Marker below using a smartphone and allow the webpage to access the camera.
 
   <p align="center" >
-  <img src="gifs/hammertexttest.gif" alt="hammertexttestgif" height="200" width="200" vertical-align='middle'/>
+  <img src="gifs/hammertexttest.gif" alt="hammertexttestgif" height="300" width="300" vertical-align='middle'/>
 <img src="./images/QR-hammertexttest2.png" alt="QR-hammertexttest2" height="300" width="300" vertical-align='middle'/>
   </p>
 
