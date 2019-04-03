@@ -69,7 +69,7 @@ We also see how layered objects interact with one another with different opacity
   <img src="./images/QR-scene.png" alt="QR-scene" height="400" width="400"/>
 </p>
 
-# Testing Interactivity
+# Testing Mobile Interactivity
 These next few examples are building and understanding the limits of interactivity for mobile browser AR.  Our main goals were to explore tapping, scaling, dragging, and animation.
 
 ### 1. Tapping (cursor)
@@ -180,4 +180,53 @@ The one downside is that dragging is still not a reliable action on mobile, so o
   
      <p align="center">
      <img src="./images/QR-hammertest.png" alt="QR-hammertest" height="400" width="400"/>
+     </p>
+     
+# Implementing Multiple Markers
+
+### 1. Creating and Training Custom Markers
+Having the Hiro marker is great, but when expanding scenarios to multiple markers we need a bunch of them.  However, coming up with markers was much trickier than originally expected and difficult to test.
+
+There are several types of markers that can be used such as pattern and barcode.  Hiro is considered a pattern marker, so we made more pattern markers. There are many limitations on size and shape.  After doing some research we learned:
+  * They must be square
+  * No white/transparent areas, only light gray
+  * Must be simple, but not too simple
+ 
+The first round of markers failed miserably because they were too detailed.  Markers are transformed in .patt files and are encoded in grayscale.  The following images show a marker that failed and it's corresponding encoding.
+ 
+  <p align="center">
+   <img src="./markers/ambientlab.png" alt="ambientlab" height="250" width="250"/>
+      <img src="./markers/ambientlabencoded.png" alt="ambientlabencoded" height="250" width="250"/>
+   </p>
+   
+We created a second round of markers and trained them.  This batch was based on simple icons and turned out far better.  We made sure to have large amount of black in simple patterns.  The following images show a successful marker.  You can see the encoding is much more recognizable, even to the human eye.
+
+  <p align="center">
+   <img src="./markers/circle.png" alt="circle" height="250" width="250"/>
+      <img src="./markers/circleencoded.png" alt="circleencoded" height="250" width="250"/>
+   </p>
+ 
+ The ten custom markers we created along with their pattern files can be viewed [here](https://github.com/ambientimmersivelearning/ARdemos/tree/master/markers).
+ 
+ ### 2. Implementing Multi-Marker Example
+ 
+ Our next goal was to get all 10 markers working in one demonstration.  We decided to have each marker show a different colored box.  Programming it was relatively straightforward, each marker is declared in the scene and a link to the .patt file is included.
+ 
+ ```html
+    <a-marker preset="custom" type="pattern" url="https://raw.githubusercontent.com/ambientimmersivelearning/ARdemos/master/markers/bow.patt">
+       <!-- Add your augmented reality here -->
+       <a-box position='0 0 0' material='opacity: 1; side:double; color:red;'>
+       </a-box>
+    </a-marker>
+```
+ 
+When implementing this example we ran into a problem where the program would not properly load the .patt file if we included the file from the directory.  Switching to loading it from the raw GitHub source fixed it.
+ 
+When running multiple markers we expected the shapes to distort easily and for the AR.js tracking to not handle them sufficiently.  However, we were surprised that performance did not decrease at all with ten markers in the same scene.
+
+  *  Webpage: [Multiple Markers Example](./aframe/examples/multiplemarkers.html)
+  *  [Source Code](https://github.com/ambientimmersivelearning/ARdemos/blob/master/aframe/examples/multiplemarkers.html)
+  
+     <p align="center">
+     <img src="./images/QR-multiplemarkers.png" alt="QR-multiplemarkers" height="400" width="400"/>
      </p>

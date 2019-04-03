@@ -1,0 +1,10 @@
+Bow:    https://raw.githubusercontent.com/ambientimmersivelearning/ARdemos/master/markers/bow.patt
+Check:  https://raw.githubusercontent.com/ambientimmersivelearning/ARdemos/master/markers/check.patt
+Circle: https://raw.githubusercontent.com/ambientimmersivelearning/ARdemos/master/markers/circle.patt
+Cross:  https://raw.githubusercontent.com/ambientimmersivelearning/ARdemos/master/markers/cross.patt
+Dia:    https://raw.githubusercontent.com/ambientimmersivelearning/ARdemos/master/markers/dia.patt
+House:  https://raw.githubusercontent.com/ambientimmersivelearning/ARdemos/master/markers/house.patt
+Moon:   https://raw.githubusercontent.com/ambientimmersivelearning/ARdemos/master/markers/moon.patt
+Square: https://raw.githubusercontent.com/ambientimmersivelearning/ARdemos/master/markers/square.patt
+Star:   https://raw.githubusercontent.com/ambientimmersivelearning/ARdemos/master/markers/star.patt
+Thought:https://raw.githubusercontent.com/ambientimmersivelearning/ARdemos/master/markers/thought.patt
