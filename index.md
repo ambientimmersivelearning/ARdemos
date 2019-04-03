@@ -208,7 +208,7 @@ We created a second round of markers and trained them.  This batch was based on 
  
  The ten custom markers we created along with their pattern files can be viewed [here](https://github.com/ambientimmersivelearning/ARdemos/tree/master/markers).
  
- ### 2. Implementing Multi-Marker Example
+### 2. Implementing Multi-Marker Example
  
  Our next goal was to get all 10 markers working in one demonstration.  We decided to have each marker show a different colored box.  Programming it was relatively straightforward, each marker is declared in the scene and a link to the .patt file is included.
  
