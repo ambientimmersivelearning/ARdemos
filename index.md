@@ -65,7 +65,7 @@ The following code defines the mouse cursor.  Fuse is set to `false` for mobile.
 ```
 
   *  Webpage: [Tapping Example](./aframe/examples/tapping.html)
-  *  [Source Code](https://github.com/ambientimmersivelearning/ARdemos/blob/master/aframe/examples/tapping.html)
+  *  [Source Code](https://github.com/ambientimmersivelearning/ARdemos/blob/tapping-optimization/aframe/examples/tapping.html)
    <p align="center">
   <img src="./images/QR-tapping.png" alt="QR-tapping" height="400" width="400"/>
 </p>
