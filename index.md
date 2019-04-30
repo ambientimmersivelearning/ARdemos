@@ -15,7 +15,7 @@ The following examples were completed to get accustomed to using AR.js, A-Frame,
 ### 1. Basic Cube
 
   <p align="center">
-  <img src="https://github.com/ambientimmersivelearning/ARdemos/blob/master/gifs/redbox.gif" alt="redboxgif" height="400" width="400"/>
+  <img src="gifs/redbox.gif" alt="redboxgif" height="400" width="400"/>
   </p>
 
 A basic example using A-Frame and AR.js to render a red box directly on the Hiro marker.  The box is rendered with the code:
@@ -34,7 +34,7 @@ where position indicates the x, y, z components of the cube.  The "side: double"
 ### 2. Basic Sphere
 
   <p align="center">
-  <img src="https://github.com/ambientimmersivelearning/ARdemos/blob/master/gifs/greensphere.gif" alt="greenspheregif" height="400" width="400"/>
+  <img src="gifs/greensphere.gif" alt="greenspheregif" height="400" width="400"/>
   </p>
 
 Another example to render a green sphere slightly away from the Hiro marker. We call the html tag `a-sphere` and changed `position='0 2 0'` so that the sphere hovers 2 units in the y axis above the marker.  If we edit the x or z axis, the sphere will appear off center of the marker.
