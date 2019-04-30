@@ -52,7 +52,9 @@
         <entry file="file://$PROJECT_DIR$/aframe/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor />
+              <first_editor relative-caret-position="417">
+                <caret line="91" column="56" lean-forward="true" selection-start-line="91" selection-start-column="56" selection-end-line="91" selection-end-column="56" />
+              </first_editor>
               <second_editor />
             </state>
           </provider>
@@ -62,8 +64,8 @@
         <entry file="file://$PROJECT_DIR$/index.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="831">
-                <caret line="69" column="52" selection-start-line="69" selection-start-column="52" selection-end-line="69" selection-end-column="52" />
+              <first_editor relative-caret-position="525">
+                <caret line="67" column="125" selection-start-line="67" selection-start-column="125" selection-end-line="67" selection-end-column="125" />
               </first_editor>
               <second_editor />
             </state>
@@ -89,7 +91,7 @@
         <entry file="file://$PROJECT_DIR$/aframe/examples/tapping.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="275">
-              <caret line="33" column="91" selection-start-line="33" selection-start-column="91" selection-end-line="33" selection-end-column="91" />
+              <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -120,9 +122,9 @@
         <option value="$PROJECT_DIR$/aframe/examples/cylinder.html" />
         <option value="$PROJECT_DIR$/aframe/examples/scene.html" />
         <option value="$PROJECT_DIR$/aframe/src/event.js" />
-        <option value="$PROJECT_DIR$/index.md" />
         <option value="$PROJECT_DIR$/aframe/examples/basic.html" />
         <option value="$PROJECT_DIR$/aframe/examples/sphere.html" />
+        <option value="$PROJECT_DIR$/index.md" />
         <option value="$PROJECT_DIR$/aframe/examples/tapping.html" />
       </list>
     </option>
@@ -296,14 +298,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/aframe/src/event.js" />
-    <entry file="file://$PROJECT_DIR$/aframe/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/images/QR-scene.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -312,16 +306,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/images/QR-sphere.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="831">
-            <caret line="69" column="52" selection-start-line="69" selection-start-column="52" selection-end-line="69" selection-end-column="52" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/aframe/examples/scene.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -352,10 +336,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/aframe/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="417">
+            <caret line="91" column="56" lean-forward="true" selection-start-line="91" selection-start-column="56" selection-end-line="91" selection-end-column="56" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="525">
+            <caret line="67" column="125" selection-start-line="67" selection-start-column="125" selection-end-line="67" selection-end-column="125" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/aframe/examples/tapping.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
-          <caret line="33" column="91" selection-start-line="33" selection-start-column="91" selection-end-line="33" selection-end-column="91" />
+          <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
         </state>
       </provider>
     </entry>
