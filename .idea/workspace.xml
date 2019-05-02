@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36848852-e21e-4dec-824a-8d46fbe66df1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/aframe/examples/dragging.html" beforeDir="false" afterPath="$PROJECT_DIR$/aframe/examples/dragging.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aframe/examples/draggingmobile.html" beforeDir="false" afterPath="$PROJECT_DIR$/aframe/examples/draggingmobile.html" afterDir="false" />
+<<<<<<< HEAD
+      <change afterPath="$PROJECT_DIR$/aframe/examples/hammertest.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aframe/src/hammer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+>>>>>>> f948b7d0edc77298236b163ba381413073a8ccb1
+      <change beforePath="$PROJECT_DIR$/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/index.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,15 +18,24 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DockManager">
-    <window id="2">
+    <window id="1">
       <content type="file-editors">
         <state>
           <leaf>
             <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/aframe/examples/draggingmobile.html">
+              <entry file="file://$PROJECT_DIR$/aframe/examples/hammertest.html">
                 <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+                  <state relative-caret-position="1206">
+                    <caret line="63" selection-start-line="54" selection-end-line="63" />
+                    <folding>
+                      <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                      <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    </folding>
+=======
                   <state relative-caret-position="282">
-                    <caret line="27" column="71" selection-start-line="27" selection-start-column="71" selection-end-line="27" selection-end-column="71" />
+                    <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="71" />
+>>>>>>> f948b7d0edc77298236b163ba381413073a8ccb1
                   </state>
                 </provider>
               </entry>
@@ -33,33 +47,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="477">
+                <caret line="164" column="115" selection-start-line="164" selection-start-column="115" selection-end-line="164" selection-end-column="115" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/aframe/examples/sphere.html">
+        <entry file="file://$PROJECT_DIR$/aframe/src/hammer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="40" selection-start-line="40" selection-end-line="41" selection-end-column="20" />
+            <state relative-caret-position="920">
+              <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
               <folding>
-                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/aframe/examples/scene.html">
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/aframe/examples/dragging.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="72" />
-              <folding>
-                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+            <state relative-caret-position="210">
+              <caret line="31" selection-start-line="31" selection-end-line="31" selection-end-column="64" />
+=======
         <entry file="file://$PROJECT_DIR$/images/QR-basic.png">
           <provider selected="true" editor-type-id="images" />
         </entry>
@@ -68,17 +86,22 @@
         <entry file="file://$PROJECT_DIR$/index.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="315">
-                <caret line="124" column="273" selection-start-line="124" selection-start-column="273" selection-end-line="124" selection-end-column="273" />
+              <first_editor relative-caret-position="621">
+                <caret line="132" column="391" selection-start-line="132" selection-start-column="391" selection-end-line="132" selection-end-column="391" />
               </first_editor>
               <second_editor />
+>>>>>>> f948b7d0edc77298236b163ba381413073a8ccb1
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/aframe-click-drag-component/src/index.js">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/aframe/examples/basic.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="648">
+              <caret line="35" column="48" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -94,7 +117,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aframe/build/aframe-ar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
+            <state relative-caret-position="121878">
               <caret line="5972" column="40" selection-start-line="5972" selection-start-column="29" selection-end-line="5972" selection-end-column="40" />
             </state>
           </provider>
@@ -106,6 +129,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -134,6 +159,14 @@
         <option value="$PROJECT_DIR$/aframe/build/aframe-ar.js" />
         <option value="$PROJECT_DIR$/aframe/examples/dragging.html" />
         <option value="$PROJECT_DIR$/aframe/examples/draggingmobile.html" />
+        <option value="$PROJECT_DIR$/hammer/hammer.js" />
+        <option value="$PROJECT_DIR$/hammer/examples/scipts/tap-gesture.js" />
+        <option value="$PROJECT_DIR$/hammer/examples/gesturetest1/gesturetest1.html" />
+        <option value="$PROJECT_DIR$/aframe/examples/gesturetest1/gesturetest1.html" />
+        <option value="$PROJECT_DIR$/aframe/src/tap-gesture.js" />
+        <option value="$PROJECT_DIR$/aframe/src/style.css" />
+        <option value="$PROJECT_DIR$/aframe/examples/gesturetest1.html" />
+        <option value="$PROJECT_DIR$/aframe/examples/hammertest.html" />
         <option value="$PROJECT_DIR$/index.md" />
       </list>
     </option>
@@ -145,8 +178,13 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="274" />
-    <option name="y" value="-26" />
+<<<<<<< HEAD
+    <option name="x" value="-78" />
+    <option name="y" value="-12" />
+=======
+    <option name="x" value="898" />
+    <option name="y" value="-24" />
+>>>>>>> f948b7d0edc77298236b163ba381413073a8ccb1
     <option name="width" value="1390" />
     <option name="height" value="1756" />
   </component>
@@ -156,7 +194,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -173,12 +210,6 @@
               <item name="ARdemos" type="b2602c69:ProjectViewProjectNode" />
               <item name="ARdemos" type="462c0819:PsiDirectoryNode" />
               <item name="aframe" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ARdemos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ARdemos" type="462c0819:PsiDirectoryNode" />
-              <item name="aframe" type="462c0819:PsiDirectoryNode" />
               <item name="examples" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -187,51 +218,33 @@
               <item name="aframe" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="ARdemos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ARdemos" type="462c0819:PsiDirectoryNode" />
-              <item name="aframe-click-drag-component" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ARdemos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ARdemos" type="462c0819:PsiDirectoryNode" />
-              <item name="aframe-click-drag-component" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ARdemos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ARdemos" type="462c0819:PsiDirectoryNode" />
-              <item name="three.js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ARdemos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ARdemos" type="462c0819:PsiDirectoryNode" />
-              <item name="three.js" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/aframe/examples" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Cristina\Documents\GitHub\ARdemos\aframe\examples" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Cristina\Documents\GitHub\ARdemos\aframe\src" />
+      <recent name="C:\Users\Cristina\Documents\GitHub\ARdemos\aframe\examples" />
+      <recent name="C:\Users\Cristina\Documents\GitHub\ARdemos\hammer\src" />
       <recent name="C:\Users\Cristina\Documents\GitHub\ARdemos\aframe-click-drag-component" />
       <recent name="C:\Users\Cristina\Documents\GitHub\ARdemos\gifs" />
-      <recent name="C:\Users\Cristina\Documents\GitHub\ARdemos" />
-      <recent name="C:\Users\Cristina\Documents\GitHub\ARdemos\aframe\gifs" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Cristina\Documents\GitHub\ARdemos\aframe\examples" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -246,7 +259,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.tapping.html">
+  <component name="RunManager" selected="JavaScript Debug.hammertest.html">
     <configuration default="true" type="Applet">
       <option name="HTML_FILE_NAME" value="$PROJECT_DIR$/aframe/examples/basic.html" />
       <option name="HTML_USED" value="true" />
@@ -255,6 +268,9 @@
       </method>
     </configuration>
     <configuration name="basic.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/ARdemos/aframe/examples/basic.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="hammertest.html" type="JavascriptDebugType" nameIsGenerated="true" uri="http://localhost:63342/ARdemos/aframe/examples/hammertest.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="tapping.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/ARdemos/aframe/examples/tapping.html" useBuiltInWebServerPort="true">
@@ -274,7 +290,7 @@
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="1" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.022304833" />
+      <window_info content_ui="combo" id="Project" order="3" weight="0.30349013" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -284,7 +300,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" visible="true" weight="0.0397351" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="9" side_tool="true" visible="true" weight="0.0397351" />
       <window_info anchor="bottom" id="Messages" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -318,13 +334,6 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/aframe/src/event.js" />
-    <entry file="file://$PROJECT_DIR$/aframe/examples/basic.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="72" selection-start-line="6" selection-start-column="72" selection-end-line="6" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/images/QR-scene.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -377,41 +386,96 @@
     <entry file="file://$PROJECT_DIR$/images/QR-basic.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/aframe-click-drag-component/src/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gifs/redbox.gif">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/images/QR-sphere.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/aframe/build/aframe-ar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
+        <state relative-caret-position="121878">
           <caret line="5972" column="40" selection-start-line="5972" selection-start-column="29" selection-end-line="5972" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gifs/redbox.gif">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aframe-click-drag-component/src/index.js">
+    <entry file="file://$PROJECT_DIR$/hammer.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/aframe/examples/dragging.html">
+    <entry file="file://$PROJECT_DIR$/aframe/src/hammer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="31" selection-start-line="31" selection-end-line="31" selection-end-column="64" />
+        <state relative-caret-position="920">
+          <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aframe/examples/basic.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="35" column="48" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aframe/src/tap-gesture.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aframe/src/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/aframe/examples/draggingmobile.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="18" selection-start-line="18" selection-end-line="19" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aframe/examples/dragging.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="31" selection-start-line="31" selection-end-line="31" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aframe/examples/hammertest.html">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="1206">
+          <caret line="63" selection-start-line="54" selection-end-line="63" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+=======
         <state relative-caret-position="282">
-          <caret line="27" column="71" selection-start-line="27" selection-start-column="71" selection-end-line="27" selection-end-column="71" />
+          <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="71" />
+>>>>>>> f948b7d0edc77298236b163ba381413073a8ccb1
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="315">
-            <caret line="124" column="273" selection-start-line="124" selection-start-column="273" selection-end-line="124" selection-end-column="273" />
+<<<<<<< HEAD
+          <first_editor relative-caret-position="477">
+            <caret line="164" column="115" selection-start-line="164" selection-start-column="115" selection-end-line="164" selection-end-column="115" />
+=======
+          <first_editor relative-caret-position="621">
+            <caret line="132" column="391" selection-start-line="132" selection-start-column="391" selection-end-line="132" selection-end-column="391" />
+>>>>>>> f948b7d0edc77298236b163ba381413073a8ccb1
           </first_editor>
           <second_editor />
         </state>
