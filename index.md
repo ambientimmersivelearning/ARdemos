@@ -339,8 +339,8 @@ onRenderFcts.push(function(){
 
 The program freezes when the markers are within 2 units of one another, so we know the length is registering.  However, when we were testing a simple color change the material does not update.
 
-  *  Webpage: [Chemistry Example](./aframe/examples/chemistry.html)
-  *  [Source Code](https://github.com/ambientimmersivelearning/ARdemos/blob/master/aframe/examples/measure-it.html)
+  *  Webpage: [Chemistry Example](./three.js/examples/chemistry.html)
+  *  [Source Code](https://github.com/ambientimmersivelearning/ARdemos/blob/master/three.js/examples/chemistry.html)
   
   
 # Conclusion
