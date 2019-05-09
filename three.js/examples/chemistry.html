@@ -1,42 +1,24 @@
 <!DOCTYPE html>
-<html>
+<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<!-- three.js library -->
+<script src='vendor/three.js/build/three.js'></script>
+<!-- jsartookit -->
+<script src="../vendor/jsartoolkit5/build/artoolkit.min.js"></script>
+<script src="../vendor/jsartoolkit5/js/artoolkit.api.js"></script>
+<!-- include threex.artoolkit -->
+<script src="../src/threex/threex-artoolkitsource.js"></script>
+<script src="../src/threex/threex-artoolkitcontext.js"></script>
+<script src="../src/threex/threex-arbasecontrols.js"></script>
+<script src="../src/threex/threex-armarkercontrols.js"></script>
+<script>THREEx.ArToolkitContext.baseURL = '../'</script>
 
-<head>
-
-    <!-- edit veiwport for mobile devices -->
-    <meta name='viewport' content='width=device-width, initial-scale=0.5'>
-
-    <title>AR Demos: Multiple Marker Testing</title>
-
-    <!-- include a-frame -->
-    <script src="vendor/aframe/build/aframe.min.js"></script>
-
-    <script src='vendor/three.js/build/three.js'></script>
-    <!-- jsartookit -->
-    <script src="../vendor/jsartoolkit5/build/artoolkit.min.js"></script>
-    <script src="../vendor/jsartoolkit5/js/artoolkit.api.js"></script>
-
-    <!-- include threex.artoolkit -->
-    <script src="../src/threex/threex-artoolkitsource.js"></script>
-    <script src="../src/threex/threex-artoolkitcontext.js"></script>
-    <script src="../src/threex/threex-arbasecontrols.js"></script>
-    <script src="../src/threex/threex-armarkercontrols.js"></script>
-    <script>THREEx.ArToolkitContext.baseURL = '../'</script>
-
-</head>
-
-
-<!-- start the body of your page -->
-<body style='margin : 0px; overflow: hidden; font-family: Monospace;'><div style='position: absolute; top: 10px; width:100%; text-align: center; z-index: 1;'>
-    <a href="https://github.com/jeromeetienne/AR.js/" target="_blank">AR.js</a> - Measure the distance between 2 markers - hiro and kanji
-    <br/>
-    Contact me any time at <a href='https://twitter.com/jerome_etienne' target='_blank'>@jerome_etienne</a>
+<body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
+<div style='position: absolute; top: 10px; width:100%; text-align: center; z-index: 1;'>
 </div>
 <script>
     //////////////////////////////////////////////////////////////////////////////////
     //		Init
     //////////////////////////////////////////////////////////////////////////////////
-
     // init renderer
     var renderer	= new THREE.WebGLRenderer({
         antialias	: true,
@@ -48,25 +30,19 @@
     renderer.domElement.style.top = '0px'
     renderer.domElement.style.left = '0px'
     document.body.appendChild( renderer.domElement );
-
     // array of functions for the rendering loop
     var onRenderFcts= [];
-
     // init scene and camera
     var scene	= new THREE.Scene();
-
     //////////////////////////////////////////////////////////////////////////////////
     //		Initialize a basic camera
     //////////////////////////////////////////////////////////////////////////////////
-
     // Create a camera
     var camera = new THREE.Camera();
     scene.add(camera);
-
     ////////////////////////////////////////////////////////////////////////////////
     //          handle arToolkitSource
     ////////////////////////////////////////////////////////////////////////////////
-
     var arToolkitSource = new THREEx.ArToolkitSource({
         // to read from the webcam
         sourceType : 'webcam',
@@ -74,12 +50,10 @@
         // to read from an image
         // sourceType : 'image',
         // sourceUrl : THREEx.ArToolkitContext.baseURL + '../data/images/img.jpg',
-
         // to read from a video
         // sourceType : 'video',
         // sourceUrl : THREEx.ArToolkitContext.baseURL + '../data/videos/headtracking.mp4',
     })
-
     arToolkitSource.init(function onReady(){
         onResize()
     })
@@ -98,7 +72,6 @@
     ////////////////////////////////////////////////////////////////////////////////
     //          initialize arToolkitContext
     ////////////////////////////////////////////////////////////////////////////////
-
     // create atToolkitContext
     var arToolkitContext = new THREEx.ArToolkitContext({
         cameraParametersUrl: THREEx.ArToolkitContext.baseURL + '../data/data/camera_para.dat',
@@ -109,11 +82,9 @@
         // copy projection matrix to camera
         camera.projectionMatrix.copy( arToolkitContext.getProjectionMatrix() );
     })
-
     // update artoolkit on every frame
     onRenderFcts.push(function(){
         if( arToolkitSource.ready === false )	return
-
         arToolkitContext.update( arToolkitSource.domElement )
     })
 
@@ -122,7 +93,6 @@
         //////////////////////////////////////////////////////////////////////////////
         //		markerRoot1
         //////////////////////////////////////////////////////////////////////////////
-
         // build markerControls
         var markerRoot1 = new THREE.Group
         markerRoot1.name = 'marker1'
@@ -132,19 +102,29 @@
             patternUrl : 'https://raw.githubusercontent.com/ambientimmersivelearning/ARdemos/master/markers/bow.patt',
             // patternUrl : THREEx.ArToolkitContext.baseURL + '../data/data/patt.kanji',
         })
-
-        // add a gizmo in the center of the marker
-        var geometry	= new THREE.OctahedronGeometry( 0.1, 0 )
-        var material	= new THREE.MeshNormalMaterial({
-            wireframe: true
+        // create oxygen
+        var color = new THREE.Color("rgb(255, 0, 0)");
+        var geometry	= new THREE.SphereGeometry( 0.8, 32, 32)
+        var material	= new THREE.MeshBasicMaterial({
+            transparent : true,
+            color: color,
+            opacity: 0.7,
         });
-        var mesh	= new THREE.Mesh( geometry, material );
+        var mesh = new THREE.Mesh( geometry, material );
         markerRoot1.add( mesh );
 
+        onRenderFcts.push(function(){
+            var length = markerRoot1.position.distanceTo(markerRoot2.position)
+
+            if(length < 2){
+                var newcolor = new THREE.Color("rgb(0,102,255)");
+                markerRoot1.material.color = newcolor;
+                markerRoot1.material.color.needsUpdate = true;
+            }
+        })
         //////////////////////////////////////////////////////////////////////////////
         //		markerRoot2
         //////////////////////////////////////////////////////////////////////////////
-
         // build markerControls
         var markerRoot2 = new THREE.Group
         markerRoot2.name = 'marker2'
@@ -152,26 +132,25 @@
         var markerControls = new THREEx.ArMarkerControls(arToolkitContext, markerRoot2, {
             type : 'pattern',
             // patternUrl : THREEx.ArToolkitContext.baseURL + '../data/data/patt.hiro',
-            patternUrl :  'https://raw.githubusercontent.com/ambientimmersivelearning/ARdemos/master/markers/check.patt',
+            patternUrl : 'https://raw.githubusercontent.com/ambientimmersivelearning/ARdemos/master/markers/check.patt',
         })
-
-        // add a gizmo in the center of the marker
-        var geometry	= new THREE.OctahedronGeometry( 0.1, 0 )
-        var material	= new THREE.MeshNormalMaterial({
-            wireframe: true
+        //create hydrogen
+        var color = new THREE.Color("rgb(255,255,255)");
+        var geometry	= new THREE.SphereGeometry( 0.4, 32, 32)
+        var material	= new THREE.MeshBasicMaterial({
+            transparent : true,
+            color: color,
+            opacity: 0.7,
         });
-        var mesh	= new THREE.Mesh( geometry, material );
+        var mesh = new THREE.Mesh( geometry, material );
         markerRoot2.add( mesh );
     })()
-
-
     ;(function(){
         var markerRoot1 = scene.getObjectByName('marker1')
         var markerRoot2 = scene.getObjectByName('marker2')
 
         var container = new THREE.Group
         scene.add(container)
-
         // update container.visible and scanningSpinner visibility
         onRenderFcts.push(function(){
             if( markerRoot1.visible === true && markerRoot2.visible === true ){
@@ -195,14 +174,12 @@
         geometry.vertices.push(new THREE.Vector3(-1, 0, -3));
         var lineMesh = new THREE.Line(geometry, material);
         container.add(lineMesh)
-
         // update lineMesh
         onRenderFcts.push(function(){
             var geometry = lineMesh.geometry
             geometry.vertices[0].copy(markerRoot1.position)
             geometry.vertices[1].copy(markerRoot2.position)
             geometry.verticesNeedUpdate = true
-
             geometry.computeBoundingSphere();
             geometry.computeLineDistances();
 
@@ -210,19 +187,15 @@
             lineMesh.material.scale = length * 10
             lineMesh.material.needsUpdate = true
         })
-
-
         //////////////////////////////////////////////////////////////////////////////
         //		display the distance between the 2 markers
         //////////////////////////////////////////////////////////////////////////////
-
         // build texture
         var canvas = document.createElement( 'canvas' );
         canvas.width = 128;
         canvas.height = 64;
         var context = canvas.getContext( '2d' );
         var texture = new THREE.CanvasTexture( canvas );
-
         // build sprite
         var material = new THREE.SpriteMaterial({
             map: texture,
@@ -231,12 +204,10 @@
         var sprite = new THREE.Sprite( material );
         sprite.scale.multiplyScalar(0.5)
         container.add(sprite)
-
         // upload measure
         onRenderFcts.push(function(){
             // update sprite position
             sprite.position.addVectors(markerRoot1.position, markerRoot2.position).multiplyScalar(1/2)
-
             // get the text to display
             var length = markerRoot1.position.distanceTo(markerRoot2.position)
             var text = length.toFixed(2)
@@ -253,12 +224,10 @@
     //////////////////////////////////////////////////////////////////////////////////
     //		render the whole thing on the page
     //////////////////////////////////////////////////////////////////////////////////
-
     // render the scene
     onRenderFcts.push(function(){
         renderer.render( scene, camera );
     })
-
     // run the rendering loop
     var lastTimeMsec= null
     requestAnimationFrame(function animate(nowMsec){
@@ -290,13 +259,11 @@
         height: 40px;
         text-align: center;
     }
-
     .scanningSpinner label {
         display: block;
         color: #333;
         font-size: 200%;
     }
-
     .scanningSpinner > div {
         background-color: #333;
         height: 100%;
@@ -306,22 +273,18 @@
         -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
         animation: sk-stretchdelay 1.2s infinite ease-in-out;
     }
-
     .scanningSpinner .rect2 {
         -webkit-animation-delay: -1.1s;
         animation-delay: -1.1s;
     }
-
     .scanningSpinner .rect3 {
         -webkit-animation-delay: -1.0s;
         animation-delay: -1.0s;
     }
-
     @-webkit-keyframes sk-stretchdelay {
         0%, 40%, 100% { -webkit-transform: scaleY(0.4) }
         20% { -webkit-transform: scaleY(1.0) }
     }
-
     @keyframes sk-stretchdelay {
         0%, 40%, 100% {
             transform: scaleY(0.4);
@@ -335,4 +298,3 @@
 </style>
 
 </body>
-</html>
