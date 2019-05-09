@@ -12,9 +12,9 @@ Try it out! Scan the AR-Marker below using a smartphone and allow the webpage to
   </p>
 
 
-Documentation for an EE296 and EE 496 project focusing on the implementation of an immersive learning solution based on Augmented Reality and QR codes.
+This is documentation for an EE 296 and EE 496 project focusing on the implementation of an immersive learning solution based on Augmented Reality and QR codes.
 
-Augmented Reality (AR) refers to technology that overlays information or virtual objects on real-world scenes in real-time.  Education is a major field that is currently being affected by AR.  AR can introduce new methods of teaching, change the location and timing of studying, and make the learning process more engaging.  Smartphones are the ideal platform for AR in education due to portability, size, and availability.  Our team is interested in exploring ways to create a more immersive and engaging learning experience using smartphone AR technology.
+Augmented Reality (AR) refers to technology that overlays information or virtual objects on real-world scenes in real-time.  Education is a major field that is currently being affected by AR.  AR can introduce new methods of teaching, change the location and timing of studying, and make the learning process more engaging.  Smartphones are the ideal platform for AR in education due to portability, size, and availability.  Our team is interested in exploring ways to create a more immersive and engaging learning experience using browser based smartphone AR technology.
 
 
 # Introductory Examples and Setting Up The Environment
@@ -182,12 +182,47 @@ The one downside is that dragging is still not a reliable action on mobile, so o
      <img src="./images/QR-hammertest.png" alt="QR-hammertest" height="400" width="400"/>
      </p>
      
+
+### 4. Testing Mobile Performance
+During our research we found a program created by Jermone Etienne, the creator of AR.js, that allows users to test mobile performance.  Using three.js, the program has a small FPS counter in the top right corner of the webpage.  We tested different phones by waving Hiro markers in the scene and observing for frame drops.
+
+According to Etienne, mobile performs incredibly well and has up to 60 FPS on 2 year old devices.  The images below show screenshots of the mobile performance testing on an iPhone 5 SE (left) and Google Pixel 2 (right).
+
+ <p align="center">
+     <img src="./images/iPhoneperformance.PNG" alt="iphone" height="300" width="200"/>
+     <img src="./images/pixelperformance.png" alt="pixel" height="300" width="200"/>
+ </p>
+     
+The iPhone 5 SE, which was released in 2016, has a range of 38-60 FPS, but generally performed from 54 above.  The Pixel 2, released in 2017, has an FPS range of 50-60, but also averaged 57 and above.  If we were to test more recent phones we believe the performance would be even better and more stable.  However, during all the demonstrations we've created so far the iPhone has no problem keeping up.
+
+The AR.js documentation states:
+
+> We are still early in the project but here are some initial numbers to give you an idea.
+
+> * I got 60fps stable on Nexus6P
+
+> * I got 60fps stable on nexus6p
+> * Some reports [Sony Xperia Z2 (2.5 years old) runs around 50fps](https://twitter.com/leinadkalpot/status/834121238087925763) - this is a 170euro phone
+> * Some reports [~50fps on a old nexus5, and ~60fps on nexus 9](https://twitter.com/Ellyll/status/834312442926751744) - nexus5 is 3.5 years old!
+> * Some reports it working on windows phone edge!! [13fps on Lumia 950](https://twitter.com/leinadkalpot/status/834299384510763012) for some.
+  [40-45fps on lumia 930](https://twitter.com/fastclemmy/status/834817155665391616) for others.
+
+> Obviously you mileage may vary. The performance you get will depend on 3 things: How heavy your 3D is, How you tune your parameters
+and the hardware that you are using.
+
+If you're more interested in this mobile performance testing or want to try it out yourself you can click on the links below.
+
+  *  Webpage: [Mobile Performance Testing](https://jeromeetienne.github.io/AR.js/three.js/examples/mobile-performance.html)
+  *  [Source Code](https://github.com/jeromeetienne/AR.js/blob/master/aframe/examples/mobile-performance.html)
+  
+
 # Implementing Multiple Markers
+The next steps in our design were to implement multiple markers in one browser page.  This ended up being more difficult than expected.
 
 ### 1. Creating and Training Custom Markers
 Having the Hiro marker is great, but when expanding scenarios to multiple markers we need a bunch of them.  However, coming up with markers was much trickier than originally expected and difficult to test.
 
-There are several types of markers that can be used such as pattern and barcode.  Hiro is considered a pattern marker, so we made more pattern markers. There are many limitations on size and shape.  After doing some research we learned:
+There are several types of markers that can be used such as pattern and barcode.  Hiro is considered a pattern marker, so we made more of these types. There are many limitations on size and shape.  After doing some research we learned:
   * They must be square
   * No white/transparent areas, only light gray
   * Must be simple, but not too simple
@@ -209,7 +244,11 @@ We created a second round of markers and trained them.  This batch was based on 
  The ten custom markers we created along with their pattern files can be viewed [here](https://github.com/ambientimmersivelearning/ARdemos/tree/master/markers).
  
 ### 2. Implementing Multi-Marker Example
- 
+
+  <p align="center">
+  <img src="gifs/multimarker.gif" alt="multimarker" height="250" width="250"/>
+  </p>
+
  Our next goal was to get all 10 markers working in one demonstration.  We decided to have each marker show a different colored box.  Programming it was relatively straightforward, each marker is declared in the scene and a link to the .patt file is included.
  
  ```html
@@ -230,3 +269,79 @@ When running multiple markers we expected the shapes to distort easily and for t
      <p align="center">
      <img src="./images/QR-multiplemarkers.png" alt="QR-multiplemarkers" height="400" width="400"/>
      </p>
+     
+### 3. Measuring Distance Between Markers
+
+
+After getting multiple markers working together we wanted to have them interact with one another.  Lucky for us there was a very helpful [example](https://github.com/jeromeetienne/AR.js/blob/master/three.js/examples/measure-it.html) online.  This example sets up the basis for measuring the distance between two markers.  We tweaked the example by customizing it with our own markers using Bow and Check.  A lot of time was spent reading through this code and trying to understand it.  The example used the three.js library, which we were not heavily exposed to in previous demos.
+
+This example definitely gave us ideas for expanding interactivity between markers, but we also realized there were a couple of drawbacks.  While it would be really cool to be able to measure the distance and create separate events for 10 custom markers, the code would be tedious and messy.  The following is just setting up characteristics for one marker:
+
+```javascript
+        // build markerControls
+        var markerRoot1 = new THREE.Group
+        markerRoot1.name = 'marker1'
+        scene.add(markerRoot1)
+        var markerControls = new THREEx.ArMarkerControls(arToolkitContext, markerRoot1, {
+            type : 'pattern',
+            patternUrl : 'https://raw.githubusercontent.com/ambientimmersivelearning/ARdemos/master/markers/bow.patt',
+            // patternUrl : THREEx.ArToolkitContext.baseURL + '../data/data/patt.kanji',
+        })
+        // add a gizmo in the center of the marker
+        var geometry	= new THREE.OctahedronGeometry( 0.1, 0 )
+        var material	= new THREE.MeshNormalMaterial({
+            wireframe: true
+        });
+        var mesh	= new THREE.Mesh( geometry, material );
+        markerRoot1.add( mesh );
+```
+
+We need to repeat the code above for a second marker as well.  If we tried using all ten custom markers, with custom shapes it would get out of hand very quickly.  Next, we need to have the two markers interact using a line and showing the distance between them:
+
+```javascript
+onRenderFcts.push(function(){
+            var geometry = lineMesh.geometry
+            geometry.vertices[0].copy(markerRoot1.position)
+            geometry.vertices[1].copy(markerRoot2.position)
+            geometry.verticesNeedUpdate = true
+            geometry.computeBoundingSphere();
+            geometry.computeLineDistances();
+
+            var length = markerRoot1.position.distanceTo(markerRoot2.position)
+            lineMesh.material.scale = length * 10
+            lineMesh.material.needsUpdate = true
+        })
+```
+
+To put it into perspective if we used three markers in this example we'd be measuring positions between Marker1-Marker2, Marker2-Marker3, and Marker1-Marker3.  The combinations available are n choose 2 (shoutout to EE 342).  If we have four markers, there are six combinations; ten markers equals 45 combinations to keep track of.
+
+  *  Webpage: [Measuring Example](./three.js/examples/measure-it.html)
+  *  [Source Code](https://github.com/ambientimmersivelearning/ARdemos/blob/master/three.js/examples/measure-it.html)
+  
+       <p align="center">
+       <img src="./images/QR-measureit.png" alt="QR-measureit" height="400" width="400"/>
+       </p>
+       
+### 4. Chemistry Demonstration (WIP)
+As the semester was winding down we tried to implement a chemistry demonstration.  Our idea was to have different atoms tied to custom markers and when they were in close range of one another they could combine into new molecules.  We had a function checking for a distance < 2 between two markers and then the marker would update.  However, the rendering is not working properly.  Our rendering function is below:
+
+```javascript
+onRenderFcts.push(function(){
+            var length = markerRoot1.position.distanceTo(markerRoot2.position)
+
+            if(length < 2){
+                var newcolor = new THREE.Color("rgb(0,102,255)");
+                markerRoot1.material.color = newcolor;
+                markerRoot1.material.color.needsUpdate = true;
+            }
+        })
+``` 
+
+The program freezes when the markers are within 2 units of one another, so we know the length is registering.  However, when we were testing a simple color change the material does not update.
+
+  *  Webpage: [Chemistry Example](./aframe/examples/chemistry.html)
+  *  [Source Code](https://github.com/ambientimmersivelearning/ARdemos/blob/master/aframe/examples/measure-it.html)
+  
+  
+# Conclusion
+This has been a really enjoyable project to work on.  There were basic components that made it perfect for an EE 296 project, and more complicated problems that made it EE 496 appropriate. AR-Codes are a viable, cheap, and efficient way to deliver AR to the classroom— without requiring excessive equipment, proprietary software, or extensive knowledge of technology on the part of the teacher. Many of the available Mixed Reality frameworks are inaccessible to programming laymen/educators interested in developing simple, customized classroom activities. A-Frame and AR.js combat this by using basic HTML with minimal setup. With additional time and development this platform could be at the forefront of bringing AR into the classroom, adding it to textbooks, or including models on assignments.  We have high hopes!
