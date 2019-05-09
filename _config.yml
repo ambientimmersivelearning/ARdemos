@@ -1,5 +1,5 @@
 title: Ambient Immersive Learning
 description: AR QR examples.
 show_downloads: false
-google_analytics:
+google_analytics: false
 theme: jekyll-theme-leap-day
